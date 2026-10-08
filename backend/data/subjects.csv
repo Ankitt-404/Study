@@ -1,0 +1,15 @@
+semester,code,name,category,credits,lecture_hours,tutorial_hours,practical_hours,skill_hours,is_lab,elective_group
+3,CSENU211T11,Data Structures,MC,4,3,1,0,0,false,
+3,CSENU211T02,Computer Architecture,MC,3,2,1,0,0,false,
+3,CSENU211T03,Formal Language and Automata Theory,MC,3,2,1,0,0,false,
+3,CSENU211T04,Object Oriented Programming with Java,MC,3,2,1,0,0,false,
+3,CSENU212T07A,Numerical Methods and Programming,ME,3,2,1,0,0,false,sem3-elective:numerical
+3,,Optimization Technique,ME,3,2,1,0,0,false,sem3-elective:optimization
+3,MVSSU222T03,Soft Skill Development III,NV,1,0,0,0,2,false,
+3,BIOTU230T16,MDC II: Biology for Engineers,MDC,4,3,1,0,0,false,
+3,,Foreign Language I,AEC,2,2,0,0,0,false,
+3,CSENU211P12,Data Structures Lab,MC,1,0,0,2,0,true,
+3,CSENU211P07,Computer Architecture Lab,MC,1,0,0,2,0,true,
+3,CSENU211P08,Object Oriented Programming with Java Lab,MC,1,0,0,2,0,true,
+3,CSENU212P15A,Numerical Methods and Programming Lab,ME,1,0,0,2,0,true,sem3-elective:numerical
+3,,Optimization Technique Lab,ME,1,0,0,2,0,true,sem3-elective:optimization
