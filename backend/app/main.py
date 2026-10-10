@@ -5,6 +5,7 @@ from app.search import search
 from app.db import get_conn
 from app.ingestion import create_document, process_document
 from app.memory import create_conversation, load_history, save_turn
+from app.agent import run_agent
 MAX_BYTES = 25 * 1024 * 1024
 
 app = FastAPI()
@@ -70,12 +71,30 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat")
 def chat(body: ChatRequest):
-    if body.conversation_id is None:
+    if not body.conversation_id:
         cid = create_conversation(body.question)
         history = []
     else:
         cid = body.conversation_id
         history = load_history(cid)
     result = answer_question(body.question, body.document_ids, body.k, history)
+    save_turn(cid, body.question, result["answer"], result["sources"])
+    return {"conversation_id": cid, **result}
+
+class AgentRequest(BaseModel):
+    question: str = Field(min_length=1, max_length=500)
+    document_ids: list[int] | None = None
+    conversation_id: int | None = None
+
+
+@app.post("/agent")
+def agent_endpoint(body: AgentRequest):
+    if not body.conversation_id:
+        cid = create_conversation(body.question)
+        history = []
+    else:
+        cid = body.conversation_id
+        history = load_history(cid)
+    result = run_agent(body.question, history, body.document_ids)
     save_turn(cid, body.question, result["answer"], result["sources"])
     return {"conversation_id": cid, **result}

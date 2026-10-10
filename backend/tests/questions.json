@@ -1,0 +1,22 @@
+[
+  {"question": "Which sorting algorithms are covered in Data Structures?", "must_contain": ["radix sort"]},
+  {"question": "What is the Josephus problem practical?", "must_contain": ["josephus"]},
+  {"question": "How many credits is Data Structures?", "must_contain": ["data structures", "04[3-1-0]"]},
+  {"question": "What is the prerequisite for Computer Architecture?", "must_contain": ["digital logic"]},
+  {"question": "What does the Computer Architecture lab simulate?", "must_contain": ["vhdl"]},
+  {"question": "Which text books are used for Formal Language and Automata Theory?", "must_contain": ["hopcroft"]},
+  {"question": "What is covered in the Finite Automata module?", "must_contain": ["moore machine"]},
+  {"question": "What is covered under context free languages?", "must_contain": ["chomsky normal form"]},
+  {"question": "Which complexity classes are taught?", "must_contain": ["np complete"]},
+  {"question": "What are access modifiers in the Java syllabus?", "must_contain": ["access modifiers"]},
+  {"question": "Which database does the Java lab use?", "must_contain": ["mysql"]},
+  {"question": "What is covered in multithreading?", "must_contain": ["daemon threads"]},
+  {"question": "Which numerical methods find roots of equations?", "must_contain": ["bisection method"]},
+  {"question": "Which integration rules are in Numerical Methods?", "must_contain": ["simpson"]},
+  {"question": "What is covered in linear programming?", "must_contain": ["simplex"]},
+  {"question": "How is the critical path found in PERT and CPM?", "must_contain": ["critical path"]},
+  {"question": "Which queuing models are taught?", "must_contain": ["m/m/1"]},
+  {"question": "What is covered in MS Office for Soft Skills?", "must_contain": ["ms powerpoint"]},
+  {"question": "Which topics come under enzymes in Biology for Engineers?", "must_contain": ["ribozymes"]},
+  {"question": "What is the total credit of semester 3?", "must_contain": ["total credit=27"]}
+]
