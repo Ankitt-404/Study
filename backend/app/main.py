@@ -3,12 +3,19 @@ from pydantic import BaseModel, Field
 from app.answer import answer_question
 from app.search import search
 from app.db import get_conn
+from fastapi.middleware.cors import CORSMiddleware
 from app.ingestion import create_document, process_document
 from app.memory import create_conversation, load_history, save_turn
 from app.agent import run_agent
 MAX_BYTES = 25 * 1024 * 1024
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
